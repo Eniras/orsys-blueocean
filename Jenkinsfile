@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Stage 1 ') {
       steps {
-        sh 'git clone https://github.com/abesrour1111/git_devops.git /var/lib/jenkins/depotjenkins5'
+        sh 'git clone https://github.com/abesrour1111/git_devops.git /var/lib/jenkins/depotjenkins6'
       }
     }
 
@@ -16,7 +16,7 @@ ls  gestion_utilisateurs >> /dev/null 2>&1 && echo "Mon fichier existe" || echo 
 
     stage('Stage 3') {
       steps {
-        sh '''if test ls /var/lib/jenkins/depotjenkins| wc \' -eq 2
+        sh '''if test ls /var/lib/jenkins/depotjenkins| wc -eq 2
 then
 grep -A1 modification gestion_groupes && grep -A1 modifications gestion_utilisateurs
 else
