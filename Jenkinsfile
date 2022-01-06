@@ -9,8 +9,8 @@ pipeline {
 
     stage('Stage 2 ') {
       steps {
-        sh '''ls gestion_groupes >> /dev/null 2>&1 && echo "Mon fichier existe") || echo "Mon fichier n\'existe pas"
-ls  gestion_utilisateurs >> /dev/null 2>&1 && echo "Mon fichier existe") || echo "Mon fichier n\'existe pas"'''
+        sh '''ls gestion_groupes >> /dev/null 2>&1 && echo "Mon fichier existe" || echo "Mon fichier n\'existe pas"
+ls  gestion_utilisateurs >> /dev/null 2>&1 && echo "Mon fichier existe" || echo "Mon fichier n\'existe pas"'''
       }
     }
 
@@ -20,7 +20,7 @@ ls  gestion_utilisateurs >> /dev/null 2>&1 && echo "Mon fichier existe") || echo
 then
 grep -A1 modification gestion_groupes && grep -A1 modifications
 else
-echo "message d\'erreur, clone "échoué"
+echo "message d\'erreur, clone "Ã©chouÃ©"
 fi'''
       }
     }
