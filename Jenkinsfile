@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Stage 1 ') {
       steps {
-        sh 'git clone https://github.com/abesrour1111/git_devops.git /var/lib/jenkins/depotjenkins4'
+        sh 'git clone https://github.com/abesrour1111/git_devops.git /var/lib/jenkins/depotjenkins5'
       }
     }
 
@@ -20,7 +20,7 @@ ls  gestion_utilisateurs >> /dev/null 2>&1 && echo "Mon fichier existe" || echo 
 then
 grep -A1 modification gestion_groupes && grep -A1 modifications gestion_utilisateurs
 else
-echo "message d\'erreur, clone echoue"
+echo \'message erreur, clone echoue\'
 fi'''
       }
     }
